@@ -1,10 +1,16 @@
-
-def selection(A):
-
-for i in range(0,len(A)-1):
-    min index =i
-    for i in range (i+1,len(A)):
-        if A[j] < A[min index]:
-            min index = i
-    if min index !=i:
-        A[i],A[min index]=A[min index],A[i]
+arr =[4,8,19,2,28,21]
+ 
+min = 0   
+n = len(arr)
+ 
+while(min <= n-1):
+  s_i = min
+  while(s_i <= n-1):     
+    if (arr[s_i] < arr[min]):
+      arr[min],arr[s_i] = arr[s_i],arr[min] 
+    s_i = s_i+1
+ 
+  min = min+1
+ 
+for element in arr:
+  	print element
